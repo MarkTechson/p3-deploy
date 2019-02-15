@@ -13,6 +13,9 @@ if (process.env.NODE_ENV === "production") {
 
 // Define API routes here
 
+app.get("/api/users", function (req, res) {
+  res.json(["Mark", "Andy", "Sarah"]);
+});
 // Send every other request to the React app
 // Define any API routes before this runs
 app.get("*", (req, res) => {
